@@ -47,9 +47,14 @@ https://medium.com/@hiepxanh/angular-vite-example-is-crazy-fast-3ee4d730020c
 
 > ng new temp-angular-app
 
+Replace the old Vite FE template with the new Angular FE template:
 Copy the content of the temp-angular-app in the $/web folder
 
+Go to $/web and install all required packages:
+
 > npm i
+
+Start the FE server:
 
 > npm run start
 
