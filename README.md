@@ -1,4 +1,5 @@
-# sharedRepository
+# [2025-05-23] sharedRepository
+
 Angular playground. Shared repository (Alexandra Bozocea)
 
 # Code management: GitHub
@@ -11,6 +12,9 @@ from vscode, clone the empty Github repository, then create the base app with vi
 
 > npx create-turbo@latest -e with-vite
 
+This template comes with a dummy frontend side found at: $\sharedRepository\my-turborepo\apps\web\
+Will will replace this later with another template provided by Angular
+
 # Server: Vite (works with Angular 16+)
 
 https://vitejs.dev/config/server-options
@@ -18,16 +22,18 @@ https://vitejs.dev/config/server-options
 > npm run dev (obsolete)
 > npm run start
 
-# Update node(js) v21.0.0 -> 22.5.1
+# Update node(js) v21.0.0 -> 22.5.1 -> 22.16.0
 
-Angular works with node v22+
-download latest .msi windows file from nodejs.org and install
+\*Angular works with node v22+
+
+Download latest .msi windows file from nodejs.org and install
+https://nodejs.org/en/download
 
 # Update npm 9.6.5
 
-> npm update
+// > npm update
 
-# Install Angular 17
+# Install Angular 19
 
 https://medium.com/@hiepxanh/angular-vite-example-is-crazy-fast-3ee4d730020c
 
@@ -35,9 +41,9 @@ https://medium.com/@hiepxanh/angular-vite-example-is-crazy-fast-3ee4d730020c
 
 # npm doesn't know about ng. link npm to ng
 
-> npm link @angular/cli
+// > npm link @angular/cli
 
-# Replace the base app with an Angular app
+# Replace the FE base app with another Angular FE template app
 
 > ng new temp-angular-app
 
