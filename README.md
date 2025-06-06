@@ -60,6 +60,24 @@ Start the FE server:
 
 # Default port: 4200
 
+##################################
+
+### project configuration file
+
+# purpose: REST API backend
+
+Tutorial: https://geshan.com.np/blog/2021/10/nodejs-sqlite/
+
+# Install SqLite3
+
+Install on Windows: https://www.configserverfirewall.com/windows-10/install-sqlite3-on-windows-10/
+
+Unzip file and copy to a location.
+
+Add the location to the environment variable PATH
+
+Test by running > sqlite3 --version
+
 # Libraries
 
 for web:
