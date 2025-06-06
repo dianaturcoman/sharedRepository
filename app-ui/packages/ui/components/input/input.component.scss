@@ -1,0 +1,76 @@
+@use '@repo/styles/index.scss' as custom;
+
+.input {
+  margin-bottom: 24px;
+
+  &__error {
+    @include custom.typo-text_small;
+
+    color: custom.$color-error;
+    padding: 0 16px;
+  }
+
+  &__errors {
+    margin-top: 4px;
+  }
+
+  &__input {
+    @include custom.typo-headline_3;
+
+    border: 1px solid custom.$color-primary_70;
+    border-radius: 10px;
+    color: custom.$color-gray;
+    padding: 16px;
+    width: 100%;
+    box-sizing: border-box;
+
+    &--error {
+      border-color: custom.$color-error;
+
+      +.input__label {
+        color: custom.$color-error;
+      }
+    }
+
+    &::placeholder {
+      color: custom.$color-middle_gray;
+    }
+
+    &:active:not(.input__input--error, [disabled]),
+    &:focus:not(.input__input--error, [disabled]) {
+      border-color: custom.$color-primary;
+
+      &+.input__label {
+        color: custom.$color-primary;
+      }
+    }
+
+    &:hover:not(.input__input--error, :active, :focus, [disabled]) {
+      border-color: custom.$color-gray;
+
+      &+.input__label {
+        color: custom.$color-gray;
+      }
+    }
+
+    &[disabled] {
+      border-color: custom.$color-middle-gray;
+      color: custom.$color-middle-gray;
+    }
+  }
+
+  &__input-container {
+    position: relative;
+  }
+
+  &__label {
+    @include custom.typo-text_small;
+
+    background-color: custom.$color-white;
+    color: custom.$color-primary;
+    left: 12px;
+    padding: 0 4px;
+    position: absolute;
+    top: -9px;
+  }
+}

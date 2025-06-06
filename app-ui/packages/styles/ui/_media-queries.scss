@@ -1,0 +1,33 @@
+@use 'sass:map';
+
+$breakpoints: (
+  small: 600px,
+  medium: 905px,
+  large: 1440px,
+);
+
+@mixin mq($key) {
+  $size: map-get($breakpoints, $key);
+
+  @if ($size) {
+    @media only screen and (min-width: $size) {
+      @content;
+    }
+  }
+
+  @else {
+    @error '`#{$key}` does not exist in the breakpoints';
+  }
+}
+
+@function screen-width($key) {
+  $screen-width: map.get($breakpoints, $key);
+
+  @if $screen-width {
+    @return $screen-width;
+  }
+
+  @else {
+    @error '`#{$key}` does not exist in the breakpoints';
+  }
+}

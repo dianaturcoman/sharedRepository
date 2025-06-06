@@ -1,0 +1,5 @@
+$cdk-zindex: 1100;
+
+.cdk-overlay-container {
+  z-index: $cdk-zindex;
+}

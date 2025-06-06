@@ -1,0 +1,206 @@
+@use './media-queries' as *;
+@use './colors' as color;
+
+$_font_name: 'Source Sans Pro';
+
+@mixin _font_regular {
+  font-family: $_font_name;
+  font-weight: 400;
+}
+
+@mixin _font_semibold {
+  font-family: $_font_name;
+  font-weight: 600;
+}
+
+@mixin _font_bold {
+  font-family: $_font_name;
+  font-weight: 700;
+}
+
+/*
+This mixins holds definition which apply to all texts
+ */
+@mixin _text_base {
+  color: color.$gray;
+}
+
+@mixin text_regular {
+  @include _font_regular;
+  @include _text_base;
+  font-size: 14px;
+  line-height: 22px;
+
+  @include mq('small') {
+    line-height: 20px;
+  }
+
+  @include mq('large') {
+    line-height: 20px;
+  }
+}
+
+@mixin text_bold {
+  @include _font_bold;
+  @include _text_base;
+  font-size: 14px;
+  line-height: 22px;
+
+  @include mq('small') {
+    line-height: 20px;
+  }
+
+  @include mq('large') {
+    line-height: 20px;
+  }
+}
+
+@mixin text_button {
+  @include _font_semibold;
+  @include _text_base;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+
+  @include mq('small') {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+@mixin text_small {
+  @include _font_regular;
+  @include _text_base;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+
+  @include mq('small') {
+    line-height: 18px;
+  }
+
+  @include mq('large') {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@mixin headline_1 {
+  @include _font_bold;
+  @include _text_base;
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: 0.01em;
+
+  @include mq('small') {
+    line-height: 30px;
+  }
+
+  @include mq('large') {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
+
+@mixin headline_2 {
+  @include _font_bold;
+  @include _text_base;
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: 0.01em;
+  margin: 0;
+
+  @include mq('small') {
+    line-height: 26px;
+  }
+
+  @include mq('large') {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+
+@mixin headline_3 {
+  @include _font_regular;
+  @include _text_base;
+  font-size: 16px;
+  line-height: 24px;
+
+  @include mq('small') {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @include mq('large') {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
+@mixin headline_4 {
+  @include _font_bold;
+  @include _text_base;
+  font-size: 16px;
+  line-height: 22px;
+
+  @include mq('small') {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @include mq('large') {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
+@mixin headline_5 {
+  @include _font_regular;
+  @include _text_base;
+  font-size: 16px;
+  line-height: 20px;
+
+  @include mq('small') {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @include mq('large') {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+@mixin headline_6 {
+  @include _font_regular;
+  @include _text_base;
+  font-size: 16px;
+  line-height: 20px;
+
+  @include mq('small') {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  @include mq('large') {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@mixin headline_7 {
+  @include _font_bold;
+  @include _text_base;
+  font-size: 16px;
+  line-height: 20px;
+
+  @include mq('small') {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  @include mq('large') {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

@@ -1,0 +1,137 @@
+@use '@repo/styles/index.scss' as custom;
+@use '@repo/styles/ui/media-queries' as *;
+
+:host {
+  display: block;
+}
+
+$block-selector: '.button';
+
+
+#{$block-selector} {
+  align-items: center;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: 10px 16px;
+  width: 100%;
+
+  @include mq('small') {
+    width: auto;
+  }
+
+  &--no-border {
+    padding: 0;
+    border-radius: 0;
+  }
+
+  &--icon-position {
+    &-left {
+      flex-direction: row-reverse;
+
+      #{$block-selector}__icon {
+        margin-right: 10px;
+      }
+    }
+
+    &-right {
+      flex-direction: row;
+
+      #{$block-selector}__icon {
+        margin-left: 10px;
+      }
+    }
+
+    &-center {
+      flex-direction: row;
+
+      #{$block-selector}__icon {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  ;
+
+  &--primary {
+    #{$block-selector}__label{
+      text-transform: uppercase;
+    }
+    background-color: custom.$color-primary;
+    color: custom.$color-white;
+
+    &:active,
+    &:hover {
+      background-color: custom.$color-primary-70;
+    }
+
+    &[disabled] {
+      background-color: custom.$color-light_gray;
+    }
+  }
+
+  &--secondary {
+    #{$block-selector}__label{
+      text-transform: uppercase;
+    }
+    background-color: custom.$color-white;
+    color: custom.$color-gray;
+
+    &:active,
+    &:hover {
+      color: custom.$color-middle_gray;
+    }
+
+    &[disabled] {
+      color: custom.$color-light_gray;
+    }
+  }
+
+  &--filter {
+    background-color: custom.$color-secondary;
+    color: custom.$color-white;
+
+    &:hover {
+      background-color: custom.$color-secondary_50;
+    }
+
+    &[disabled] {
+      background-color: custom.$color-light_gray;
+    }
+  }
+  &--filter.-buttonActive {
+    background-color: custom.$color-white;
+    color: custom.$color-gray;
+    border: 1px solid;
+  }
+
+  &--minimalist {
+    background-color: custom.$color-white;
+    color: custom.$color-gray;
+    border: 1px solid;
+
+    &:active,
+    &:hover {
+      color: custom.$color-middle_gray;
+    }
+
+    &[disabled] {
+      color: custom.$color-light_gray;
+    }
+  }
+
+  &[disabled] {
+    cursor: default;
+  }
+
+  &__icon {
+    font-size: 18px;
+
+    &--hidden {
+      display: none;
+    }
+  }
+}

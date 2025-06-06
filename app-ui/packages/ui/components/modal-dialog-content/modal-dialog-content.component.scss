@@ -1,0 +1,94 @@
+// @use '@soka-bau-uba/style-guide/index.scss' as soka;
+// @use '@soka-bau-uba/style-guide/abstract/media-queries' as *;
+// @use '@soka-bau-uba/uba-style-guide/uba/icons.scss';
+
+// .soka-overlay-container {
+//     display: flex;
+//     justify-content: center;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     z-index: 1000;
+//     background-color: rgba(0, 0, 0, 0.5);
+// }
+
+// .panel {
+//     @include soka.typo-text_regular;
+//     padding: soka.$grid-padding_s;
+// }
+
+// .container {
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//     border-radius: 18px;
+//     background-color: white;
+// }
+
+// .accent {
+//     background-color: soka.$color-primary;
+//     border-radius: 18px 18px 0 0;
+//     height: 10px;
+//     display: block;
+// }
+
+// .header {
+//     padding: soka.$grid-padding_s;
+//     padding-bottom: soka.$grid-padding_l;
+// }
+
+// .body {
+//     padding: soka.$grid-padding_s soka.$grid-padding_l *2 soka.$grid-padding_l soka.$grid-padding_l *2;
+// }
+
+// .footer{
+//     padding: soka.$grid-padding_s;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: right;
+//     white-space: nowrap;
+// }
+
+// .actionButton{
+//   padding-left: soka.$grid-padding_xs;
+// }
+
+// .title {
+//     @include soka.typo-text_bold;
+//     line-height: 24px;
+//     color: black;
+//     @include soka.typo-headline_2;
+//     padding: 0px soka.$grid-padding_xl soka.$grid-padding_xl 0px;
+//     text-align: left;
+// }
+
+// .header button{
+//     float: right;
+//     font-size: 21px;
+//     font-weight: bold;
+//     color: #000000;
+//     text-shadow: 0 1px 0 #ffffff;
+//     padding: 0;
+//     cursor: pointer;
+//     background: transparent;
+//     border: 0;
+//     filter: alpha(opacity=50);
+// }
+
+// .header button:hover {
+//     color: #000000;
+//     text-decoration: none;
+//     cursor: pointer;
+//     opacity: 0.5;
+// }
+
+
+// .left {
+//   float: left;
+//   justify-content: left;
+// }
+
+// .right {
+//   float: right;
+//   justify-content: right;
+// }

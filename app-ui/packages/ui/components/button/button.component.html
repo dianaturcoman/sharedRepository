@@ -1,0 +1,6 @@
+<button class="button button--{{ variant }}" [type]="buttonType"
+  [disabled]="disabled" [ngClass]="{ 'button--no-border': noBorder, '-buttonActive': active}">
+  <span *ngIf="label" class="button__label">{{ label }}</span>
+  <span class="button__icon icon icon--{{ icon }}" [ngClass]="{ 'button__icon--hidden': hideIcon }">
+  </span>
+</button>

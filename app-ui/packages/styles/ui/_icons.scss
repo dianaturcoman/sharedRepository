@@ -1,0 +1,29 @@
+/// Defines the icon size to be XS
+@mixin size_xs {
+    width: 8px;
+    height: 8px;
+}
+
+/// Defines the icon size to be S
+@mixin size_s {
+    width: 16px;
+    height: 16px;
+}
+
+/// Defines the icon size to be M
+@mixin size_m {
+    width: 24px;
+    height: 24px;
+}
+
+/// Defines the icon size to be L
+@mixin size_l {
+    width: 32px;
+    height: 32px;
+}
+
+/// Defines the icon size to be XL
+@mixin size_xl {
+    width: 40px;
+    height: 40px;
+}

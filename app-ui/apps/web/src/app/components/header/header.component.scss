@@ -1,0 +1,57 @@
+@use '@repo/styles/index.scss';
+
+.logo {
+  padding: 10px;
+  height: 2rem;
+}
+
+.vertical-align{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right{
+  justify-content: right;
+}
+
+a {
+  display: block;
+  padding: 25px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+  text-shadow: 1px 0px rgba(green, .4);
+  color: black;
+  letter-spacing: .2em;
+  text-decoration: none;
+  transition: color 200ms;
+  transform-style: preserve-3d;
+
+  &:hover {
+    color: black;
+  }
+
+  &:after {
+    content: attr(data-title);
+    position: absolute;
+    display: block;
+    text-shadow: none;
+    top: 29%;
+    left: 18px;
+    padding: 5px 7px;
+    color: transparent;
+    background: orange;
+
+    transform-origin: 50% 0%;
+    backface-visibility: hidden;
+    transform: translate3d(0px, 105%, 0px) rotateX(-112deg);
+    transform-style: preserve-3d;
+    transition: all 200ms ease;
+    z-index: -1;
+  }
+
+  &:hover:after {
+    transform: rotateX(0deg) translateZ(0px);
+  }
+}

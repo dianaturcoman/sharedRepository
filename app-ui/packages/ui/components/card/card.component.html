@@ -1,0 +1,15 @@
+<div class="card">
+  <div *ngIf="title" class="card__header" data-testid="card-header">
+    <span class="card__icon icon icon--{{ icon }}"></span>
+    <div class="card__title" data-testid="card-title">{{ title }}</div>
+    <div *ngIf="displayHeaderAction" class="card__headerAction">
+      <button class="actionButton" (click)="onClick()" type="button"><span
+          class="icon icon--{{ actionIcon }}"></span></button>
+    </div>
+  </div>
+  <div
+    class="card__content card__content--background-color-{{ backgroundColor }} card__content--border-color-{{ borderColor }}"
+    data-testid="card-content">
+    <ng-content></ng-content>
+  </div>
+</div>

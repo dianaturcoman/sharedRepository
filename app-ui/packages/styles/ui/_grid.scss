@@ -1,0 +1,82 @@
+// @use 'index' as custom;
+
+// @use './media-queries' as *;
+
+// margin
+$margin: 8px;
+$margin_xs: $margin; // 8px
+$margin_s: $margin * 2; // 16px
+$margin_m: $margin * 3; // 24px
+$margin_l: $margin * 4; // 32px
+$margin_xl: $margin * 5; // 40px
+$margin_2xl: $margin * 6; // 48px
+
+// padding
+$padding: 8px;
+$padding_xs: $margin; // 8px
+$padding_s: $margin * 2; // 16px
+$padding_m: $margin * 3; // 24px
+$padding_l: $margin * 4; // 32px
+$padding_xl: $margin * 5; // 40px
+$padding_2xl: $margin * 6; // 48px
+
+@mixin gap() {
+    gap: $margin_s;
+
+    @include mq('large') {
+        gap: $margin_m;
+    }
+}
+
+/* table with 2 columns look */
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: $padding_xs ;
+}
+
+.column {
+    flex-basis: 100%;
+    flex: 1;
+    column-gap: $padding_xs ;
+}
+
+.nowrap {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+}
+
+/* Bootstrap breakpoint XS ( Landscape phone to portrait tablet ) */
+@media (max-width: 767px) {
+    .column {
+        padding-top: $padding_s;
+    }
+}
+
+/* Bootstrap breakpoint SM ( Portrait tablet to landscape and desktop ) */
+// @media (min-width: 768px) and (max-width: 991px) {
+//   .column {
+//     padding-top: custom.$grid-padding_s;
+//     width: 95%;
+//   }
+// }
+
+/* Bootstrap breakpoint MD */
+// @media (min-width: 992px) and (max-width: 1199px) {
+//   .column {
+//     padding-top: custom.$grid-padding_s;
+//     width: 95%;
+//   }
+// }
+
+/* Bootstrap breakpoint LG (Large desktop ) */
+// @media (min-width: 1200px) {
+//   .column {
+//     padding-top: custom.$grid-padding_s;
+//     width: 95%;
+//   }
+// }

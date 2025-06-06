@@ -92,6 +92,10 @@ enter sqlite shell: > sqlite3
 exit: > .exit
 open existing database file \*.sqlite: > sqlite3 : > attach "bica.sqlite" as db1;
 
+# start the BE
+
+> npm run start
+
 ##############
 
 # MD5 hash generator
@@ -100,7 +104,7 @@ https://www.md5hashgenerator.com/
 
 ##############
 
-# Libraries
+# FE Libraries
 
 for web:
 @angular/core
@@ -117,3 +121,27 @@ for packages:
 @angular/core
 @angular/forms
 @ngx-translate/core
+
+# BE Libraries
+
+@sqlite3 : 9.6.5
+@sequelize/core
+express
+cors
+typescript
+@types/express
+@types/node
+dotenv
+ts-node
+jsonwebtoken
+@types/jsonwebtoken
+
+##################
+
+# update
+
+> npm install -g npm-check-updates
+
+> ncu -u
+
+> npm i

@@ -1,0 +1,97 @@
+// @use '@soka-bau-uba/style-guide/index.scss' as soka;
+// @use '@soka-bau-uba/style-guide/abstract/media-queries' as *;
+// @use '@soka-bau-uba/uba-style-guide/uba/icons.scss';
+
+// :host {
+//   display: block;
+// }
+
+// .actionButton {
+//   font-size: 21px;
+//   cursor: pointer;
+//   background: transparent;
+//   padding: 0;
+//   border: none;
+//   background: none;
+// }
+
+// .actionButton:hover {
+//   color: #000000;
+//   text-decoration: none;
+//   cursor: pointer;
+//   opacity: 0.5;
+// }
+
+// .card {
+
+//   &__header {
+//     display: flex;
+//     background-color: soka.$color-primary_30;
+//     border-left: 1px solid soka.$color-primary_30;
+//     border-radius: 18px 18px 0 0;
+//     border-right: 1px solid soka.$color-primary_30;
+//     border-top: 1px solid soka.$color-primary_30;
+//     padding: soka.$grid-padding_m;
+//   }
+
+//   &__icon {
+//     color: black;
+//     font-size: 50px;
+//     padding-right: 10px;
+//   }
+
+//   &__title {
+//     @include soka.typo-headline_2;
+//     color: soka.$color-gray;
+//     white-space: nowrap;
+//   }
+
+//   &__headerAction {
+//     justify-content: right;
+//     display: flex;
+//     width: 100%;
+//   }
+
+
+//   &__content {
+//     @include soka.typo-text_regular;
+//     border-radius: 18px;
+//     border-style: solid;
+//     border-width: 1px;
+//     padding: 16px;
+
+//     @include mq('small') {
+//       padding: 24px;
+//     }
+
+//     .card__header+& {
+//       border-radius: 0 0 18px 18px;
+//       padding: 1em;
+//     }
+
+//     &--background-color- {
+//       &orange-10 {
+//         background-color: soka.$color-primary_10;
+//       }
+
+//       &orange-30 {
+//         background-color: soka.$color-primary_30;
+//       }
+
+//       &white {
+//         background-color: soka.$color-white;
+//       }
+//     }
+
+//     &--border-color- {
+//       &orange-10 {
+//         border-color: soka.$color-primary_10;
+//       }
+
+//       &orange-30 {
+//         border-color: soka.$color-primary_30;
+//       }
+//     }
+//   }
+
+// }

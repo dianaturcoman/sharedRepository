@@ -1,0 +1,26 @@
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
+
+        <h3>IBS</h3>
+        @if (displayErrorMessage) {<h4>Failed</h4>}
+
+        <label for="username">Username</label>
+                        <input type="text" formControlName="username"
+                            [ngClass]="{ 'is-invalid': submitted && username.errors }" />
+                        <div *ngIf="submitted && username.errors" class="invalid-feedback">
+         <div *ngIf="username.errors">Username is required</div>
+        </div>
+
+        <label for="password">Password</label>
+        <input type="password" formControlName="password"
+            [ngClass]="{ 'is-invalid': submitted && password.errors }" />
+        <div *ngIf="submitted && password.errors" class="invalid-feedback">
+            <div *ngIf="password.errors">Password is required</div>
+        </div>
+
+        <button class="button">Log In</button>
+
+    </form>

@@ -1,0 +1,20 @@
+@use './colors' as color;
+
+@mixin base {
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        width: 4px;
+        background-color: color.$middle_gray;
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    scrollbar-width: thin;
+    scrollbar-color: color.$middle_gray white;
+}

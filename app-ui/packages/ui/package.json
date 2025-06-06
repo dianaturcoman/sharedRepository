@@ -1,7 +1,10 @@
 {
   "name": "@repo/ui",
-  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "version": "0.0.1",
   "exports": {
+    "./button": "./components/button/",
     "./counter": "./components/counter.ts",
     "./header": "./components/header.ts",
     "./setup-counter": "./utils/counter.ts"
@@ -10,10 +13,20 @@
   "scripts": {
     "lint": "eslint \"**/*.ts\""
   },
+  "files": [
+    "src/"
+  ],
+  "dependencies": {
+    "@angular/cdk": "^20.0.2",
+    "@angular/core": "^20.0.1",
+    "@angular/forms": "^20.0.1",
+    "@ngx-translate/core": "^16.0.4",
+    "@repo/styles": "*"
+  },
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
-    "eslint": "^8.57.0",
-    "typescript": "5.5.4"
+    "eslint": "^9.28.0",
+    "typescript": "^5.8.3"
   }
 }

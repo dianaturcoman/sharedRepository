@@ -1,0 +1,34 @@
+<!-- <ng-template #modalTemplate>
+  <div class="soka-overlay-container">
+    <div class="panel">
+      <div class="container">
+
+        <div class="accent"></div>
+
+        <section *ngIf="dialogTitle && dialogTitle.length" class="header">
+          <div class="right">
+            <button *ngIf="dialogBeenden" type="button" aria-label="Close" (click)="hide()">
+              <span aria-hidden="true" class="icon icon--{{ ESokaIcon.CLOSE }}"></span>
+            </button>
+          </div>
+          <span *ngIf="dialogIcon" [ngClass]="'icon icon--'+dialogIcon"></span> &nbsp;
+          <span class="title">{{dialogTitle | translate}}</span>
+        </section>
+
+        <section class="body" [ngClass]="{'mitFooter': buttons && buttons.length}">
+          <ng-content></ng-content>
+        </section>
+
+        <section *ngIf="buttons && buttons.length" class="footer">
+          <div class="actionButton" *ngFor="let button of buttons">
+            <shared-button *ngIf="!button.icon" [label]="button.label | translate" (click)="button.handler()"
+              [hideIcon]="true" [disabled]="button.isDisabled ? button.isDisabled() : false"></shared-button>
+            <shared-button *ngIf="button.icon" [label]="button.label | translate" (click)="button.handler()"
+              [hideIcon]="false" [icon]="button.icon"></shared-button>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</ng-template> -->
