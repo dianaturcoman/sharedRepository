@@ -1,4 +1,10 @@
-# [2025-05-23] sharedRepository
+# [2025-05-23]
+
+# Github repository: sharedRepository
+
+#############
+
+# FE setup
 
 Angular playground. Shared repository (Alexandra Bozocea)
 
@@ -60,11 +66,11 @@ Start the FE server:
 
 # Default port: 4200
 
-##################################
+#############
 
-### project configuration file
+# BE setup
 
-# purpose: REST API backend
+# REST API backend
 
 Tutorial: https://geshan.com.np/blog/2021/10/nodejs-sqlite/
 
@@ -85,6 +91,14 @@ Test by running > sqlite3 --version
 enter sqlite shell: > sqlite3
 exit: > .exit
 open existing database file \*.sqlite: > sqlite3 : > attach "bica.sqlite" as db1;
+
+##############
+
+# MD5 hash generator
+
+https://www.md5hashgenerator.com/
+
+##############
 
 # Libraries
 
