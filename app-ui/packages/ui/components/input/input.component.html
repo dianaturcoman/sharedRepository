@@ -1,11 +1,7 @@
 <div class="input">
   <div class="input__input-container">
 
-    <input *ngIf="autofocus" (focusout)="trimInput()" [attr.maxlength]="maxLength" [attr.placeholder]="placeholder"
-      [formControl]="control" [ngClass]="{ 'input__input--error': control.invalid && control.touched }"
-      class="input__input" type={{type}} (keyup)="onDateKeyUp($event)" input-autofocus>
-
-    <input *ngIf="!autofocus" (focusout)="trimInput()" [attr.maxlength]="maxLength" [attr.placeholder]="placeholder"
+    <input (focusout)="trimInput()" [attr.maxlength]="maxLength" [attr.placeholder]="placeholder"
       [formControl]="control" [ngClass]="{ 'input__input--error': control.invalid && control.touched }"
       class="input__input" type={{type}} (keyup)="onDateKeyUp($event)">
 
@@ -15,10 +11,13 @@
   </div>
   <div *ngIf="control.invalid && control.touched && errors" class="input__errors">
     <ng-container *ngFor="let error of formUtil.getAllFormValidatorErrors(control)">
-      <div *ngIf="errors[error]; else objError" class="input__error">{{ errors[error] }}</div>
+      @if(errors[error]){
+      <div class="input__error">{{ errors[error] }}</div>
+      }@else(){
       <ng-template #objError>
         <div class="input__error">{{ checkIfErrorObject(error) }}</div>
       </ng-template>
+      }
     </ng-container>
   </div>
 </div>
