@@ -1,6 +1,6 @@
 import { inject, Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User } from '@app/pages/models/user';
+import { User } from '@app/models/user';
 import { Md5 } from 'ts-md5';
 import moment from 'moment';
 import { Role } from '@app/app.routes';

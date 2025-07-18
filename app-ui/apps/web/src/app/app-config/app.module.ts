@@ -6,8 +6,8 @@ import { DefaultNavigationOptions, routes } from '../app.routes';
 import { importProvidersFrom, inject, NgModule } from "@angular/core";
 import { ASSETS_PATH, LANGUAGES } from "@app/environments/environment";
 import { AuthenticationService } from '@services/authentication.service';
-import { AuthInterceptor } from "@app/pages/helpers/auth-interceptor";
-import { ErrorInterceptor } from "@app/pages/helpers/error-interceptor";
+import { AuthInterceptor } from "@app/helpers/auth-interceptor";
+import { ErrorInterceptor } from "@app/helpers/error-interceptor";
 
 export const translateLoaderFatory = (http: HttpClient) => new TranslateHttpLoader(http, ASSETS_PATH + `/i18n/`);
 

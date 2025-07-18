@@ -1,5 +1,5 @@
 import { NavigationExtras, Routes } from '@angular/router';
-import { AuthGuard } from './pages/helpers/auth.guard';
+import { AuthGuard } from './helpers/auth.guard';
 
 export enum RouteList {
   home = '',
@@ -36,7 +36,7 @@ const children: Routes = [
 export const routes: Routes = [
     {
       path: '',
-      loadComponent: () => import('./home/home.component').then((mod) => mod.HomeComponent),
+      loadComponent: () => import('./pages/home/home.component').then((mod) => mod.HomeComponent),
       children,
       canActivate: [AuthGuard]
     },
