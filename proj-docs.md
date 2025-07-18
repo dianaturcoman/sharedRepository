@@ -8,4 +8,9 @@ https://www.youtube.com/watch?v=30LWjhZzg50
 ...
 
 # tailwind
-https://tailwindcss.com/
+https://tailwindcss.com
+
+# branches
+/main - code that is always running and in good condition
+/develop - code for developing and sharing development features
+/feature/$ - code for developing certain features
