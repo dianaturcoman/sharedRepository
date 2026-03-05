@@ -16,10 +16,10 @@
   "files": [
     "src/"
   ],
-  "dependencies": {
-    "@angular/cdk": "^20.0.2",
-    "@angular/core": "^20.0.1",
-    "@angular/forms": "^20.0.1",
+"dependencies": {
+    "@angular/cdk": "^21.2.0",
+    "@angular/core": "^21.2.0",
+    "@angular/forms": "^21.2.0",
     "@ngx-translate/core": "^16.0.4",
     "@repo/styles": "*"
   },
