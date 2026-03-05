@@ -1,0 +1,16 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "angular-cli": {
+      "type": "local",
+      "command": ["npx", "-y", "@angular/cli", "mcp"],
+      "enabled": true
+    },
+    "chrome-devtools": {
+      "enabled": true
+    },
+    "puppeteer": {
+      "enabled": true
+    }
+  }
+}
