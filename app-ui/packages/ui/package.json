@@ -17,16 +17,16 @@
     "src/"
   ],
 "dependencies": {
-    "@angular/cdk": "^21.2.0",
-    "@angular/core": "^21.2.0",
-    "@angular/forms": "^21.2.0",
-    "@ngx-translate/core": "^16.0.4",
+    "@angular/cdk": "^21.2.1",
+    "@angular/core": "^21.2.1",
+    "@angular/forms": "^21.2.1",
+    "@ngx-translate/core": "^17.0.0",
     "@repo/styles": "*"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
-    "eslint": "^9.28.0",
-    "typescript": "^5.8.3"
+    "eslint": "^10.0.2",
+    "typescript": "^5.9.3"
   }
 }

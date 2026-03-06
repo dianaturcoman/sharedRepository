@@ -1,6 +1,6 @@
 import { HTTP_INTERCEPTORS, HttpClient, provideHttpClient, withFetch, withXsrfConfiguration } from "@angular/common/http";
-import { TranslateModuleConfig, TranslateLoader, TranslateService, TranslateModule } from "@ngx-translate/core";
-import { TranslateHttpLoader } from "@ngx-translate/http-loader";
+import { TranslateService, TranslateModule } from "@ngx-translate/core";
+import { provideTranslateHttpLoader } from "@ngx-translate/http-loader";
 import { provideRouter, withComponentInputBinding, withRouterConfig } from '@angular/router';
 import { DefaultNavigationOptions, routes } from '../app.routes';
 import { importProvidersFrom, inject, NgModule } from "@angular/core";
@@ -9,16 +9,6 @@ import { AuthenticationService } from '@services/authentication.service';
 import { AuthInterceptor } from "@app/helpers/auth-interceptor";
 import { ErrorInterceptor } from "@app/helpers/error-interceptor";
 
-export const translateLoaderFatory = (http: HttpClient) => new TranslateHttpLoader(http, ASSETS_PATH + `/i18n/`);
-
-const TranslateConfig: TranslateModuleConfig = {
-  loader: {
-    provide: TranslateLoader,
-    useFactory: translateLoaderFatory,
-    deps: [HttpClient]
-  }
-}
-
 @NgModule({
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
@@ -26,7 +16,11 @@ const TranslateConfig: TranslateModuleConfig = {
     // { provide: LOCALE_ID, deps: [TranslateService] },
     provideRouter(routes, withComponentInputBinding(), withRouterConfig(DefaultNavigationOptions)),
     provideHttpClient(withFetch(), withXsrfConfiguration({ cookieName: 'XSRF-TOKEN', headerName: 'X-XSRF-TOKEN' })),
-    importProvidersFrom([TranslateModule.forRoot(TranslateConfig)])
+    provideTranslateHttpLoader({
+      prefix: ASSETS_PATH + '/i18n/',
+      suffix: ''
+    }),
+    importProvidersFrom(TranslateModule.forRoot())
   ]
 })
 
