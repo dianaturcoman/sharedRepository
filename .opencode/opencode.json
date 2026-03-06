@@ -11,6 +11,16 @@
     },
     "puppeteer": {
       "enabled": true
+    },
+    "stitch": {
+      "url": "https://stitch.googleapis.com/mcp",
+      "type": "remote",
+      "oauth": false,
+      "headers": {
+        "Accept": "application/json",
+        "X-Goog-Api-Key": "AQ.Ab8RN6KrPoPGQvv7q60Ct5pB7x3zTWCERKUZtbrEtPF1DOZ6Bg"
+      },
+      "enabled": true
     }
   }
 }
